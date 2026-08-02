@@ -20,6 +20,11 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 - **Trade-off:** Easy to implement with `O(1)` memory, but highly inefficient at `O(n²)` time.
 - **Future Growth:** Explored optimizing this to `O(n log n)` using Binary Search and `O(n)` using a Hash Map by trading space for execution speed.
 
+### Day 2: Rotate Array
+- **Initial Thought:** Using an extra array to hold shifted elements, which takes `O(N)` extra space.
+- **Trade-off:** Optimized to an in-place algorithm using array reversal. This reduces auxiliary space down to `O(1)` while keeping time complexity at `O(N)`.
+- **Key Learning:** Normalizing $k$ with `k = k % n` is essential to prevent out-of-bounds errors when the rotation count exceeds the array length.
+
 ---
 📫 **Let's Connect!**
 If you have suggestions for better optimizations or want to collaborate, feel free to open an issue or connect with me on LinkedIn.
