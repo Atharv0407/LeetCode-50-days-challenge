@@ -1,16 +1,17 @@
-🚀 50 Days of LeetCode Challenge
+# 🚀 50 Days of LeetCode Challenge
+
 Welcome to my data structures and algorithms repository! I am embarking on a dedicated 50-Day Coding Challenge to strengthen my problem-solving skills, master core computer science concepts, and build daily consistency in software engineering.
 
-🎯 Challenge Goals
+🎯 **Challenge Goals**
 * **Consistency:** Solve at least one algorithmic problem every single day for 50 days.
 * **Optimization:** Progress from brute-force solutions to optimal time/space complexities.
 * **Documentation:** Track and articulate my learning journey publicly to help others and receive feedback.
 
-🛠️ Tech Stack
+🛠️ **Tech Stack**
 * **Language:** Java ☕
 * **Platform:** LeetCode
 
-💡 Key Takeaway Log
+💡 **Key Takeaway Log**
 
 ### Day 1: Two Sum
 * **Initial Thought:** Used a nested loop approach checking all element pairs.
@@ -26,3 +27,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Converted both strings to character arrays, sorted them using `Arrays.sort()`, and checked if they were identical.
 * **Trade-off:** Extremely clean and readable solution, but requires `O(n log n)` time complexity due to the sorting step and `O(n)` space to store the arrays.
 * **Key Learning:** Discovered that this can be further optimized to `O(n)` time and `O(1)` space by using a fixed-size frequency array (size 26) to count character occurrences instead of sorting.
+
+### Day 4: Sort Colors
+* **Initial Thought:** Counted the frequencies of 0s, 1s, and 2s in a first pass, then overwrote the original array in a second pass based on those counts.
+* **Trade-off:** Achieved **0 ms runtime (Beats 100%)** with an optimal `O(n)` time complexity and `O(1)` auxiliary space, but required two full passes through the array.
+* **Key Learning:** Explored how this can be further optimized into a single pass using the **Dutch National Flag algorithm** (Three-way partitioning) with three separate pointers.
