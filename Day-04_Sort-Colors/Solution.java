@@ -1,0 +1,30 @@
+class Solution {
+    public void sortColors(int[] arr) {
+        int n = arr.length;
+        int noOfZeroes = 0;
+        int noOfOnes = 0;
+        int noOfTwos = 0;
+        for(int i=0;i<=n-1;i++){
+            if(arr[i] == 0){
+                noOfZeroes++;
+            }
+            else if (arr[i] == 1){
+                noOfOnes++;
+            }
+            else {
+                noOfTwos++;
+            }
+        }
+        for (int  i=0;i<=n-1;i++){
+            if(i<noOfZeroes){
+                arr[i] = 0;
+            }
+            else if (i<noOfZeroes+noOfOnes){
+                arr[i] = 1;
+            }
+            else {
+                arr[i] = 2;
+            }
+        }
+    }
+}
