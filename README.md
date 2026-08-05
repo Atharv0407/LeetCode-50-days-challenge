@@ -32,3 +32,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Counted the frequencies of 0s, 1s, and 2s in a first pass, then overwrote the original array in a second pass based on those counts.
 * **Trade-off:** Achieved **0 ms runtime (Beats 100%)** with an optimal `O(n)` time complexity and `O(1)` auxiliary space, but required two full passes through the array.
 * **Key Learning:** Explored how this can be further optimized into a single pass using the **Dutch National Flag algorithm** (Three-way partitioning) with three separate pointers.
+
+### Day 5: Transpose Matrix
+* **Initial Thought:** Initialized a new matrix with inverted row and column dimensions, copying elements across the main diagonal.
+* **Trade-off:** Achieved an optimal time complexity of `O(N)` where `N` is the total number of elements in the matrix, and an output space complexity of `O(N)` to allocate the new grid.
+* **Key Learning:** Learned that while square matrices can theoretically be transposed in-place with `O(1)` auxiliary space, non-square rectangular matrices strictly require allocating a new matrix with swapped dimensions.
