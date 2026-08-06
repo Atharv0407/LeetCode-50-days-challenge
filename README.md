@@ -37,3 +37,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Initialized a new matrix with inverted row and column dimensions, copying elements across the main diagonal.
 * **Trade-off:** Achieved an optimal time complexity of `O(N)` where `N` is the total number of elements in the matrix, and an output space complexity of `O(N)` to allocate the new grid.
 * **Key Learning:** Learned that while square matrices can theoretically be transposed in-place with `O(1)` auxiliary space, non-square rectangular matrices strictly require allocating a new matrix with swapped dimensions.
+
+### Day 6: Rotate Image
+* **Initial Thought:** Considered allocating a secondary 2D matrix to manually map row elements into columns.
+* **Trade-off:** Achieved a perfect **0 ms runtime (Beats 100%)** using an **in-place** matrix modification strategy that takes `O(N²)` time complexity but limits auxiliary space to a strict `O(1)`.
+* **Key Learning:** Mastered 2D matrix manipulation by combining two fundamental geometric steps: first transposing the matrix along its main diagonal, and then reversing each individual row to complete the 90-degree clockwise rotation.
