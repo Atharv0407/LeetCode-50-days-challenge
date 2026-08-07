@@ -42,3 +42,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Considered allocating a secondary 2D matrix to manually map row elements into columns.
 * **Trade-off:** Achieved a perfect **0 ms runtime (Beats 100%)** using an **in-place** matrix modification strategy that takes `O(N²)` time complexity but limits auxiliary space to a strict `O(1)`.
 * **Key Learning:** Mastered 2D matrix manipulation by combining two fundamental geometric steps: first transposing the matrix along its main diagonal, and then reversing each individual row to complete the 90-degree clockwise rotation.
+
+### Day 7: Isomorphic Strings
+* **Initial Thought:** Mapping character pairs dynamically using a standard high-level lookup dictionary structure.
+* **Trade-off:** Achieved an impressive **5 ms runtime (Beats 98.60%)** and **43.50 MB memory usage (Beats 97.24%)** with an optimal time complexity of `O(N)` where `N` is the string length, and a fixed space complexity of `O(1)` by utilizing a fixed-size (128) character tracking array as high-speed index lookups.
+* **Key Learning:** Learned that tracking bidirectional mapping constraints in both directions (`s -> t` and `t -> s`) ensures deterministic structural integrity, safely preventing multi-character collisions.
