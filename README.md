@@ -47,3 +47,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Mapping character pairs dynamically using a standard high-level lookup dictionary structure.
 * **Trade-off:** Achieved an impressive **5 ms runtime (Beats 98.60%)** and **43.50 MB memory usage (Beats 97.24%)** with an optimal time complexity of `O(N)` where `N` is the string length, and a fixed space complexity of `O(1)` by utilizing a fixed-size (128) character tracking array as high-speed index lookups.
 * **Key Learning:** Learned that tracking bidirectional mapping constraints in both directions (`s -> t` and `t -> s`) ensures deterministic structural integrity, safely preventing multi-character collisions.
+
+### Day 8: String Compression
+* **Initial Thought:** Utilized a `StringBuilder` to sequentially collect the compressed characters and their respective group frequencies, then overwrote the initial array.
+* **Trade-off:** Achieved a highly optimized memory footprint of **45.18 MB (Beats 90.54%)**, but utilizing an extra string buffer results in an `O(N)` auxiliary space complexity instead of the strict constant space requested.
+* **Key Learning:** Realized that this problem can be solved in true `O(1)` constant extra space by using two separate read and write pointers to modify the character array entirely in-place as frequencies are calculated.
