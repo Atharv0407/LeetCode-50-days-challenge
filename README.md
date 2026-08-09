@@ -52,3 +52,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Utilized a `StringBuilder` to sequentially collect the compressed characters and their respective group frequencies, then overwrote the initial array.
 * **Trade-off:** Achieved a highly optimized memory footprint of **45.18 MB (Beats 90.54%)**, but utilizing an extra string buffer results in an `O(N)` auxiliary space complexity instead of the strict constant space requested.
 * **Key Learning:** Realized that this problem can be solved in true `O(1)` constant extra space by using two separate read and write pointers to modify the character array entirely in-place as frequencies are calculated.
+
+### Day 9: Move Zeroes
+* **Initial Thought:** Counted total zero values first, then initiated nested loops to manually bubble each encountered zero to the end of the array.
+* **Trade-off:** Ran at `O(n²)` time complexity due to nested shifts, finishing at **117 ms (Beats 5.00%)**. It requires zero external memory structures, fulfilling the in-place target with `O(1)` space complexity.
+* **Key Learning:** Learned that a two-pointer linear pass (`O(n)`) completely avoids nested looping. One pointer tracks the write location for non-zero numbers while a simple follow-up loop populates the remaining slots with trailing zeros to hit 1 ms (Beats ~100%).
