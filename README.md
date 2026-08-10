@@ -57,3 +57,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Counted total zero values first, then initiated nested loops to manually bubble each encountered zero to the end of the array.
 * **Trade-off:** Ran at `O(n²)` time complexity due to nested shifts, finishing at **117 ms (Beats 5.00%)**. It requires zero external memory structures, fulfilling the in-place target with `O(1)` space complexity.
 * **Key Learning:** Learned that a two-pointer linear pass (`O(n)`) completely avoids nested looping. One pointer tracks the write location for non-zero numbers while a simple follow-up loop populates the remaining slots with trailing zeros to hit 1 ms (Beats ~100%).
+
+### Day 10: Majority Element
+* **Initial Thought:** Sorted the entire array so that identical elements group together, making the majority element automatically land at the exact middle index `nums[nums.length/2]`.
+* **Trade-off:** Achieved an execution footprint of **6 ms (Beats 52.12%)** and **55.86 MB (Beats 18.39%)**. This approach requires a time complexity of `O(n log n)` due to the sorting step, along with `O(log n)` space performance for primitive sorting stacks.
+* **Key Learning:** Discovered that sorting can be completely avoided. The problem can be optimized to a linear `O(n)` time complexity and a strict `O(1)` constant space complexity using the **Boyer-Moore Voting Algorithm**, which identifies the majority element via a single pass by balancing an active candidate variable against a counter.
