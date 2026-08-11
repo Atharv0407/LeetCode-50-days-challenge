@@ -62,3 +62,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Sorted the entire array so that identical elements group together, making the majority element automatically land at the exact middle index `nums[nums.length/2]`.
 * **Trade-off:** Achieved an execution footprint of **6 ms (Beats 52.12%)** and **55.86 MB (Beats 18.39%)**. This approach requires a time complexity of `O(n log n)` due to the sorting step, along with `O(log n)` space performance for primitive sorting stacks.
 * **Key Learning:** Discovered that sorting can be completely avoided. The problem can be optimized to a linear `O(n)` time complexity and a strict `O(1)` constant space complexity using the **Boyer-Moore Voting Algorithm**, which identifies the majority element via a single pass by balancing an active candidate variable against a counter.
+
+### Day 11: Binary Search
+* **Initial Thought:** Handled lookups via basic sequential linear iteration across the sequence.
+* **Trade-off:** Achieved a runtime performance of **2 ms (Beats 2.84%)** and a low memory footprint of **47.97 MB (Beats 94.89%)**. This approach works at an optimal `O(log n)` time complexity while taking a strict `O(1)` auxiliary space complexity.
+* **Key Learning:** Calculated safe middle indices via `lo + (hi - lo) / 2` to systematically avoid potential integer value overflow bugs.
