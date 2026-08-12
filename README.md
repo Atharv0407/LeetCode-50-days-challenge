@@ -1,16 +1,3 @@
-# 🚀 50 Days of LeetCode Challenge
-
-Welcome to my data structures and algorithms repository! I am embarking on a dedicated 50-Day Coding Challenge to strengthen my problem-solving skills, master core computer science concepts, and build daily consistency in software engineering.
-
-🎯 **Challenge Goals**
-* **Consistency:** Solve at least one algorithmic problem every single day for 50 days.
-* **Optimization:** Progress from brute-force solutions to optimal time/space complexities.
-* **Documentation:** Track and articulate my learning journey publicly to help others and receive feedback.
-
-🛠️ **Tech Stack**
-* **Language:** Java ☕
-* **Platform:** LeetCode
-
 💡 **Key Takeaway Log**
 
 ### Day 1: Two Sum
@@ -67,3 +54,8 @@ Welcome to my data structures and algorithms repository! I am embarking on a ded
 * **Initial Thought:** Handled lookups via basic sequential linear iteration across the sequence.
 * **Trade-off:** Achieved a runtime performance of **2 ms (Beats 2.84%)** and a low memory footprint of **47.97 MB (Beats 94.89%)**. This approach works at an optimal `O(log n)` time complexity while taking a strict `O(1)` auxiliary space complexity.
 * **Key Learning:** Calculated safe middle indices via `lo + (hi - lo) / 2` to systematically avoid potential integer value overflow bugs.
+
+### Day 12: Find First and Last Position of Element in Sorted Array
+* **Initial Thought:** Used a primary binary search pass to verify the existence of the element, followed by two independent modified binary searches (Lower Bound and Upper Bound strategies) to pin down boundaries.
+* **Trade-off:** Achieved an exceptional **0 ms runtime (Beats 100.00%)** and **48.11 MB memory usage (Beats 52.11%)**. Operates at an optimal `O(log n)` time complexity while relying on a constant space performance of `O(1)`.
+* **Key Learning:** Learned to implement strict lower and upper bounds using binary search. Instead of stopping exactly when a target match is found, continuously shrinking the search space dynamically to the left or right isolates exact contiguous duplicate intervals.
