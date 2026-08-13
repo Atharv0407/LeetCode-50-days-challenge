@@ -43,7 +43,7 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 
 ---
 
-## 🕒 Week 2: Advanced Strings & Introduction to Binary Search
+## 🕒 Week 2: Advanced Strings & Advanced Binary Search
 
 ### Day 8: String Compression
 * **Initial Thought:** Utilized a `StringBuilder` to sequentially collect the compressed characters and their respective group frequencies, then overwrote the initial array.
@@ -65,14 +65,16 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Trade-off:** Achieved a runtime performance of **2 ms (Beats 2.84%)** and a low memory footprint of **47.97 MB (Beats 94.89%)**. This approach works at an optimal `O(log n)` time complexity while taking a strict `O(1)` auxiliary space complexity.
 * **Key Learning:** Calculated safe middle indices via `lo + (hi - lo) / 2` to systematically avoid potential integer value overflow bugs.
 
-### Day 12: Binary Search (Continuation/Review)
-* **Initial Thought:** Solidified foundational boundary tracking strategies for lookups under varying array constraints.
-* **Trade-off:** Focused on structural accuracy over speed, maintaining an ideal `O(log n)` time complexity and `O(1)` auxiliary space overhead.
-* **Key Learning:** Mastered index convergence mechanics and loop termination properties `while (lo <= hi)`, laying the groundwork for handling duplicate elements.
-
-### Day 13: Find First and Last Position of Element in Sorted Array
+### Day 12: Find First and Last Position of Element in Sorted Array
 * **Initial Thought:** Used a primary binary search pass to verify the existence of the element, followed by two independent modified binary searches (Lower Bound and Upper Bound strategies) to pin down boundaries.
 * **Trade-off:** Achieved an exceptional **0 ms runtime (Beats 100.00%)** and **48.11 MB memory usage (Beats 52.19%)**. Operates at an optimal `O(log n)` time complexity while relying on a constant space performance of `O(1)`.
 * **Key Learning:** Learned how to modify classic binary search into **Lower Bound** (`arr[mid] >= x`) and **Upper Bound** (`arr[mid] > x`) variations to locate the exact starting and ending boundaries of a repeating target element in an array.
 
-*(Add days up to Day 50 here)*
+### Day 13: Peak Index in a Mountain Array
+* **Initial Thought:** Realized the array behavior inherently scales up and then strictly declines, allowing us to find the peak boundary by checking middle neighbors.
+* **Trade-off:** Achieved a flawless **0 ms runtime (Beats 100.00%)** and **80.32 MB memory usage (Beats 40.69%)**. Runs at an optimal `O(log n)` time complexity with `O(1)` auxiliary space overhead.
+* **Key Learning:** Mastered localized slope checking in Binary Search. By evaluating whether `arr[mid]` is greater than its immediate neighbors, we can seamlessly decide whether to shift our bounds left or right without examining the full structure line-by-line.
+
+---
+
+## ⏳ Days 14 - 50: In Progress...
