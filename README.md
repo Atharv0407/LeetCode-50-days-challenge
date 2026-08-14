@@ -75,6 +75,11 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Trade-off:** Achieved a flawless **0 ms runtime (Beats 100.00%)** and **80.32 MB memory usage (Beats 40.69%)**. Runs at an optimal `O(log n)` time complexity with `O(1)` auxiliary space overhead.
 * **Key Learning:** Mastered localized slope checking in Binary Search. By evaluating whether `arr[mid]` is greater than its immediate neighbors, we can seamlessly decide whether to shift our bounds left or right without examining the full structure line-by-line.
 
+### Day 14: Reverse Pairs
+* **Initial Thought:** Evaluated a baseline brute-force approach looking over every index comparison to see if values match the target criteria.
+* **Trade-off:** Achieved a fast performance of **42 ms (Beats 88.73%)** and a memory usage footprint of **60.94 MB (Beats 62.52%)**. This design solves the problem at an optimal `O(n log n)` time complexity while relying on an auxiliary extra space configuration of `O(n)` to drive recursion stacks.
+* **Key Learning:** Mastered custom Divide & Conquer optimization by nesting a two-pointer evaluation stage right before the classic array reconstruction steps of a standard Merge Sort. Since partitioned subarrays are pre-sorted, hitting a match allows you to instantly increment your tracking index by the remaining block lengths without performing single step-by-step element evaluations.
+
 ---
 
-## ⏳ Days 14 - 50: In Progress...
+## ⏳ Days 15 - 50: In Progress...
