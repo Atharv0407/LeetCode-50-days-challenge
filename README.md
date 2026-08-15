@@ -80,6 +80,8 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Trade-off:** Achieved a fast performance of **42 ms (Beats 88.73%)** and a memory usage footprint of **60.94 MB (Beats 62.52%)**. This design solves the problem at an optimal `O(n log n)` time complexity while relying on an auxiliary extra space configuration of `O(n)` to drive recursion stacks.
 * **Key Learning:** Mastered custom Divide & Conquer optimization by nesting a two-pointer evaluation stage right before the classic array reconstruction steps of a standard Merge Sort. Since partitioned subarrays are pre-sorted, hitting a match allows you to instantly increment your tracking index by the remaining block lengths without performing single step-by-step element evaluations.
 
----
+### Day 15: Kth Largest Element in an Array
+* **Initial Thought:** Implemented the QuickSelect algorithm (selection algorithm based on Quicksort partitioning) to locate the target element without sorting the entire array.
+* **Trade-off:** Ended up with a slow performance of **2191 ms (Beats 5.42%)** and **79.70 MB memory usage (Beats 5.04%)**. While the average time complexity is `O(n)`, picking the first element as the pivot (`arr[lo]`) on near-sorted inputs drops the worst-case performance down to a punishing `O(n²)` time.
+* **Key Learning:** Discovered that QuickSelect can efficiently bypass a full `O(n log n)` sort. However, to guarantee a fast, predictable `O(n)` linear time runtime, you must introduce a **randomized pivot selection** strategy or shuffle the array upfront to break sorted worst-case inputs.
 
-## ⏳ Days 15 - 50: In Progress...
