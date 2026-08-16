@@ -85,3 +85,8 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Trade-off:** Ended up with a slow performance of **2191 ms (Beats 5.42%)** and **79.70 MB memory usage (Beats 5.04%)**. While the average time complexity is `O(n)`, picking the first element as the pivot (`arr[lo]`) on near-sorted inputs drops the worst-case performance down to a punishing `O(n²)` time.
 * **Key Learning:** Discovered that QuickSelect can efficiently bypass a full `O(n log n)` sort. However, to guarantee a fast, predictable `O(n)` linear time runtime, you must introduce a **randomized pivot selection** strategy or shuffle the array upfront to break sorted worst-case inputs.
 
+### Day 16: Sqrt(x)
+* **Initial Thought:** Implemented a Binary Search approach over the search space `[2, x / 2]` to find the integer square root instead of using a linear scan or a built-in exponent function.
+* **Performance:** Achieved an optimized runtime of **1 ms (Beats 98.13%)** and **42.59 MB memory usage (Beats 61.93%)**. The algorithm efficiently narrows down the candidate range in logarithmic time.
+* **Key Learning:** Learned how to safely prevent arithmetic integer overflow by casting the product (`mid * mid`) to a `long` before comparing it with `x`. Additionally, when an exact perfect square root does not exist, the `right` pointer naturally converges to the correct rounded-down floor integer at loop termination.
+
