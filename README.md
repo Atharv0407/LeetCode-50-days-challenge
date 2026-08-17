@@ -90,3 +90,10 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Performance:** Achieved an optimized runtime of **1 ms (Beats 98.13%)** and **42.59 MB memory usage (Beats 61.93%)**. The algorithm efficiently narrows down the candidate range in logarithmic time.
 * **Key Learning:** Learned how to safely prevent arithmetic integer overflow by casting the product (`mid * mid`) to a `long` before comparing it with `x`. Additionally, when an exact perfect square root does not exist, the `right` pointer naturally converges to the correct rounded-down floor integer at loop termination.
 
+
+### Day 17: Palindrome Number
+* **Initial Thought:** Implemented an iterative digit extraction approach by reversing the entire integer using modulo (`% 10`) and division (`/ 10`) operators, then comparing the reversed result with the original value.
+* **Performance:** Achieved a runtime of **5 ms (Beats 81.46%)** and **45.68 MB memory usage (Beats 94.50%)**. The algorithm operates with a time complexity of O(log₁₀(N)) and space complexity of O(1).
+* **Key Learning:** Reinforced handling of edge cases, such as immediately returning `false` for negative numbers since their negative sign prevents them from being palindromes. Also recognized the potential risk of integer overflow when reversing very large numbers, which can be mitigated by reversing only half of the digits or using a larger data type.
+
+
