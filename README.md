@@ -97,3 +97,7 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Key Learning:** Reinforced handling of edge cases, such as immediately returning `false` for negative numbers since their negative sign prevents them from being palindromes. Also recognized the potential risk of integer overflow when reversing very large numbers, which can be mitigated by reversing only half of the digits or using a larger data type.
 
 
+### Day 18: 3Sum Closest
+* **Initial Thought:** Utilized a Sorting + Two-Pointer approach to find three integers that produce a sum closest to the given target. By sorting the array first, the window can be dynamically adjusted from both ends based on whether the current sum is smaller or larger than the target.
+* **Performance:** Achieved a runtime of **16 ms (Beats 93.16%)** and **45.83 MB memory usage (Beats 14.76%)**. The algorithm operates with an efficient time complexity of O(N²) and a space complexity of O(1) auxiliary space.
+* **Key Learning:** Learned how to effectively optimize multi-variable combination problems by fixing one element and using the two-pointer technique to reduce an O(N³) brute-force search down to O(N²). Implemented an early exit condition that immediately returns the sum if it perfectly matches the target, saving unnecessary computations.
