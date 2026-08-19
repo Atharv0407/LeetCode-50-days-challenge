@@ -101,3 +101,9 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Initial Thought:** Utilized a Sorting + Two-Pointer approach to find three integers that produce a sum closest to the given target. By sorting the array first, the window can be dynamically adjusted from both ends based on whether the current sum is smaller or larger than the target.
 * **Performance:** Achieved a runtime of **16 ms (Beats 93.16%)** and **45.83 MB memory usage (Beats 14.76%)**. The algorithm operates with an efficient time complexity of O(N²) and a space complexity of O(1) auxiliary space.
 * **Key Learning:** Learned how to effectively optimize multi-variable combination problems by fixing one element and using the two-pointer technique to reduce an O(N³) brute-force search down to O(N²). Implemented an early exit condition that immediately returns the sum if it perfectly matches the target, saving unnecessary computations.
+
+
+### Day 19: Array Partition
+* **Initial Thought:** Utilized a Counting Sort (Bucket Sort) approach to bypass the O(N log N) limitation of standard comparison sorting algorithms. By dynamically mapping the array boundaries based on the precise minimum and maximum elements, the numbers can be processed in a naturally sorted linear sequence.
+* **Performance:** Achieved a runtime of **5 ms (Beats 99.86%)** and **47.36 MB memory usage (Beats 99.87%)**. The algorithm operates with a highly efficient linear time complexity of O(N) and an optimized auxiliary space complexity of O(N).
+* **Key Learning:** Learned how to leverage strict element constraints to achieve true linear time performance using value frequency buckets. Implemented an alternating boolean flag logic to perfectly sum elements at even positions without the need to fully reconstruct or duplicate a sorted copy of the entire underlying array dataset.
