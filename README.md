@@ -119,3 +119,10 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Initial Thought:** Utilized a Counting Sort approach to bypass the O(N log N) limitation of comparison-based sorting algorithms. Since the problem constraints restrict the maximum element value to 1000, a fixed-size frequency array can efficiently record the occurrences of all elements in `arr1` and arrange them sequentially according to the relative order defined by `arr2`.
 * **Performance:** Achieved a runtime of **0 ms (Beats 100.00%)** and **43.30 MB memory usage (Beats 96.25%)**. The algorithm operates with an optimal linear time complexity of O(N + M) and an optimized auxiliary space complexity of O(1) due to the fixed-size frequency bucket array.
 * **Key Learning:** Mastered the concept of using frequency maps/bucket arrays for non-comparison linear sorting when input data ranges are strictly bounded. Implemented a deterministic two-phase population strategy—first satisfying custom relative ordering constraints, followed by an iterative sweeping pass to handle leftover elements in their natural ascending order.
+
+
+### Day 22: Height Checker
+* **Initial Thought:** Extended the Counting Sort (frequency array) philosophy from previous array-rearranging problems to bypass comparison-based sorting limitations. Since the student heights are strictly bounded between 1 and 100, an integer frequency array of size 101 can effortlessly track element counts, allowing the reconstruction of the ideal sorted alignment (`expected`) in linear time to identify positional mismatches.
+* **Performance:** Achieved a runtime of **1 ms (Beats 92.50%)** and **43.17 MB memory usage (Beats 85.65%)**. The solution exhibits a linear time complexity of O(N + K) and an auxiliary space complexity of O(N) to store the expected sequence.
+* **Key Learning:** Reinforced proficiency in using fixed-size frequency buckets to generate a non-comparison sorted sequence in linear time. Solidified understanding of positional comparison metrics by mapping the state of a dynamically reconstructed optimal array against the layout of the original input configurations.
+
