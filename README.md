@@ -126,3 +126,9 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Performance:** Achieved a runtime of **1 ms (Beats 92.50%)** and **43.17 MB memory usage (Beats 85.65%)**. The solution exhibits a linear time complexity of O(N + K) and an auxiliary space complexity of O(N) to store the expected sequence.
 * **Key Learning:** Reinforced proficiency in using fixed-size frequency buckets to generate a non-comparison sorted sequence in linear time. Solidified understanding of positional comparison metrics by mapping the state of a dynamically reconstructed optimal array against the layout of the original input configurations.
 
+
+### Day 23: Sorting the Sentence
+* **Initial Thought:** Recognized that the 1-indexed positional marker appended to the end of each word determines its final location, making comparison-based sorting unnecessary. By splitting the shuffled string by spaces, extracting the numeric index from the last character of each substring, and stripping that number, the words can be placed directly into a pre-allocated string array at their correct positions in a single linear pass.
+* **Performance:** Achieved a runtime of **0 ms (Beats 100.00%)** and **42.56 MB memory usage (Beats 91.35%)**. The solution exhibits a linear time complexity of O(N), where N is the total length of the string, and an auxiliary space complexity of O(N) to store the split words and reconstruct the final sentence.
+* **Key Learning:** Reinforced proficiency in string manipulation techniques, specifically using character arithmetic (`word.charAt(n - 1) - '1'`) to map ASCII digits directly to zero-indexed array boundaries. Solidified understanding of the `String.join()` delimiter operation to efficiently assemble components back into a well-formed sentence without trailing whitespaces.
+
