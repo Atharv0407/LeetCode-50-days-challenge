@@ -155,3 +155,10 @@ A daily log tracking my progress, algorithm designs, trade-offs, and key learnin
 * **Initial Thought:** Recognized that determining the number of valid triplets that can form a triangle requires the triangle inequality condition $a + b > c$ to hold true. By sorting the array in ascending order, we can fix the largest side from the end of the array and use a two-pointer approach to find valid pairs for the remaining two sides, avoiding an expensive $O(n^3)$ brute-force check.
 * **Performance:** Achieved a runtime of **27 ms (Beats 90.92%)** and **45.74 MB memory usage (Beats 40.61%)**. The solution exhibits a time complexity of $O(n^2)$ due to the nested loop structure combining a fixed largest side with a linear two-pointer scan, and a space complexity of $O(\log n)$ inherent to the sorting implementation.
 * **Key Learning:** Learned how sorting a dataset can transform a three-variable combination problem into an optimized two-pointer search. Understood how calculating `count += (hi - lo)` instantly accounts for all intermediate valid choices when a pair satisfies the triangle condition, maximizing efficiency.
+
+
+  ### Day 28: Maximum Subarray
+* **Initial Thought:** Identified that finding the contiguous subarray with the largest sum can be optimized using Kadane's Algorithm instead of evaluating all possible subarrays via brute force. By iterating through the array while maintaining a running local maximum, we can dynamically decide whether to extend the current subarray or start a fresh one at each element.
+* **Performance:** Achieved a runtime of **1 ms (Beats 99.94%)** and **77.22 MB memory usage (Beats 48.99%)**. The solution exhibits a linear time complexity of $O(n)$ as it scans the array exactly once, and a constant space complexity of $O(1)$ since it only utilizes a few primitive tracking variables.
+* **Key Learning:** Mastered the core concept of dynamic programming through Kadane's Algorithm. Understood how local choices—determining whether a single element is worth more on its own than combined with the preceding sequence—can chain together to solve a global optimization challenge with maximum efficiency.
+
